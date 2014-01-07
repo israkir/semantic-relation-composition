@@ -9,12 +9,12 @@ def main():
     u = is_a * has_property
     v = has_property * at_location 
     t = at_location * is_a
-    print u
-    print u.check_type()
-    print v
-    print v.check_type()
-    print t 
-    print t.check_type()
+    # print u
+    # print u.check_type()
+    # print v
+    # print v.check_type()
+    # print t 
+    # print t.check_type()
     
     
 

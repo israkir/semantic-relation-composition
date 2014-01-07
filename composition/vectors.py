@@ -90,11 +90,11 @@ class RelationVector(object):
 class IsAVector(RelationVector):
     attributes = {
         'composable'       : '+', 
-        'functional'       : '+', 
+        'functional'       : '-', 
         'separable'        : '+', 
         'temporal'         : '0', 
-        'connected'        : '+', 
-        'intrinsic'        : '-', 
+        'connected'        : '-', 
+        'intrinsic'        : '+', 
         'structural'       : '-', 
         'near'             : '0', 
         'indexed_temporal' : '0'
@@ -107,7 +107,7 @@ class HasPropertyVector(RelationVector):
     attributes = {
         'composable'       : '+', 
         'functional'       : '-', 
-        'separable'        : '+', 
+        'separable'        : '0', 
         'temporal'         : '0', 
         'connected'        : '-', 
         'intrinsic'        : '+', 
@@ -127,7 +127,7 @@ class AtLocationVector(RelationVector):
         'temporal'         : '0', 
         'connected'        : '+', 
         'intrinsic'        : '-', 
-        'structural'       : '0', 
+        'structural'       : '+', 
         'near'             : '-', 
         'indexed_temporal' : '0'
     }
@@ -153,12 +153,12 @@ class UsedForVector(RelationVector):
         
 class CapableOfVector(RelationVector):
     attributes = {
-        'composable'       : '-', 
+        'composable'       : '+', 
         'functional'       : '+', 
         'separable'        : '0', 
         'temporal'         : '0', 
         'connected'        : '-', 
-        'intrinsic'        : '-', 
+        'intrinsic'        : '+', 
         'structural'       : '0', 
         'near'             : '0', 
         'indexed_temporal' : '0'

@@ -15,9 +15,10 @@ class TestVectors(ut.TestCase):
     
     def test_similarity_of_vectors(self):
         for u, v in itertools.permutations(self.vectors, 2):
+            # self.assertNotEqual(u, v, msg='%s == %s' % (u, v))
             if u == v:
-                print type(u), type(v)
-                
+                print '%s == %s' % (type(u), type(v))
+            
     
 if __name__ == '__main__':
     ut.main()
