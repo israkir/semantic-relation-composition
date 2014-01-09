@@ -35,8 +35,22 @@ def compose(vector1, vector2):
     indexed_temporal_algebra = IndexedTemporalAlgebra()
     attributes['indexed_temporal'] = indexed_temporal_algebra.do_operation(
         vector1.get_attr('indexed_temporal'), vector2.get_attr('indexed_temporal'))
-        
+
     return RelationVector(attributes)
+
+
+def find_vector_type(unknown_vector):
+    vectors = [IsAVector(), HasPropertyVector(), AtLocationVector(), UsedForVector(), 
+        CapableOfVector(), HasSubeventVector(), RelatedToVector(), HasPrerequisiteVector(), 
+            HasAVector(), MotivatedByGoalVector(), CausesVector(), DefinedAsVector(), 
+                ReceivesActionVector(), PartOfVector(), DesiresVector(), CausesDesireVector(), 
+                    LocatedNearVector(), ObstructedByVector(), HasFirstSubeventVector(), 
+                        HasLastSubeventVector(), MadeOfVector(), SimilarSizeVector(), 
+                            InheritsFromVector(), InstanceOfVector()]
+    for v in vectors:
+        if cmp(v.attributes, unknown_vector.attributes) == 0:
+            return v
+    return None
 
     
 class RelationVector(object):
@@ -52,16 +66,12 @@ class RelationVector(object):
         """
         return self.attributes[attr]
         
-    def check_type(self):
-        if self == IsAVector:
-            return IsAVector()
-        elif self == HasPropertyVector:
-            return HasPropertyVector()
-        elif self == AtLocationVector:
-            return AtLocationVector()
-        else:
-            return None
-        
+    def get_vector_type(self):
+        """
+        Return the vector type of this relation vector.
+        """
+        return find_vector_type(self)
+    
     def __mul__(self, other_vector):
         """
         Override conventional dot product of 'this' vector and 'other_vector'.
@@ -76,6 +86,9 @@ class RelationVector(object):
     def __eq__(self, other_vector):
         return True if cmp(self.attributes, other_vector.attributes) == 0 else False
         
+    def __repr(self):
+       return self.__class__ 
+    
     def __str__(self):
         """
         String representation of object is list of primitive values specified in order of 
@@ -282,7 +295,7 @@ class DefinedAsVector(RelationVector):
 class ReceivesActionVector(RelationVector):
     attributes = {
         'composable'       : '+', 
-        'functional'       : '-', 
+        'functional'       : '+', 
         'separable'        : '0', 
         'temporal'         : '0', 
         'connected'        : '-', 
@@ -432,6 +445,38 @@ class SimilarSizeVector(RelationVector):
         'connected'        : '0', 
         'intrinsic'        : '0', 
         'structural'       : '0', 
+        'near'             : '0', 
+        'indexed_temporal' : '0'
+    }
+    def __init__(self, attributes = attributes):
+        RelationVector.__init__(self, attributes)
+
+
+class InheritsFromVector(RelationVector):
+    attributes = {
+        'composable'       : '+', 
+        'functional'       : '-', 
+        'separable'        : '+', 
+        'temporal'         : '0', 
+        'connected'        : '+', 
+        'intrinsic'        : '0', 
+        'structural'       : '+', 
+        'near'             : '0', 
+        'indexed_temporal' : '0'
+    }
+    def __init__(self, attributes = attributes):
+        RelationVector.__init__(self, attributes)
+
+
+class InstanceOfVector(RelationVector):
+    attributes = {
+        'composable'       : '+', 
+        'functional'       : '-', 
+        'separable'        : '+', 
+        'temporal'         : '0', 
+        'connected'        : '+', 
+        'intrinsic'        : '+', 
+        'structural'       : '+', 
         'near'             : '0', 
         'indexed_temporal' : '0'
     }

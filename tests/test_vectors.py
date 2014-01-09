@@ -11,7 +11,8 @@ class TestVectors(ut.TestCase):
                 HasAVector(), MotivatedByGoalVector(), CausesVector(), DefinedAsVector(), 
                     ReceivesActionVector(), PartOfVector(), DesiresVector(), CausesDesireVector(), 
                         LocatedNearVector(), ObstructedByVector(), HasFirstSubeventVector(), 
-                            HasLastSubeventVector(), MadeOfVector(), SimilarSizeVector()]
+                            HasLastSubeventVector(), MadeOfVector(), SimilarSizeVector(),
+                                InheritsFromVector(), InstanceOfVector()]
     
     def test_similarity_of_vectors(self):
         for u, v in itertools.permutations(self.vectors, 2):
