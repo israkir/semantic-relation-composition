@@ -359,12 +359,12 @@ class CausesDesireVector(RelationVector):
 class LocatedNearVector(RelationVector):
     attributes = {
         'composable'       : '+', 
-        'functional'       : '-', 
-        'separable'        : '+', 
+        'functional'       : '+', 
+        'separable'        : '0', 
         'temporal'         : '0', 
-        'connected'        : '0', 
-        'intrinsic'        : '0', 
-        'structural'       : '0', 
+        'connected'        : '+', 
+        'intrinsic'        : '-', 
+        'structural'       : '+', 
         'near'             : '+', 
         'indexed_temporal' : '0'
     }

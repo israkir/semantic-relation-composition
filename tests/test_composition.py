@@ -1,5 +1,8 @@
+import sys
 import unittest as ut
 import itertools
+
+from pprint import pprint
 
 from composition.vectors import *
 
@@ -25,9 +28,7 @@ class TestComposition(ut.TestCase):
         self.inherits_from = InheritsFromVector()
     
     def test_compose_all_vectors(self):
-        import sys
         sys.stdout = open('data/composition_table.txt', 'w')
-        
         d = {}
         for u in self.vectors:
             for v in self.vectors:
@@ -36,7 +37,6 @@ class TestComposition(ut.TestCase):
                if new_vector is not None:
                    d[key] = new_vector.__class__.__name__ 
         
-        from pprint import pprint
         pprint(d)
 
     def test_isa_hasproperty(self):
