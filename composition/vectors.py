@@ -114,6 +114,7 @@ class IsAVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'a'
             
             
 class HasPropertyVector(RelationVector):
@@ -130,6 +131,7 @@ class HasPropertyVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'b'
         
         
 class AtLocationVector(RelationVector):
@@ -146,6 +148,7 @@ class AtLocationVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'c'
 
         
 class UsedForVector(RelationVector):
@@ -162,6 +165,7 @@ class UsedForVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'd'
         
         
 class CapableOfVector(RelationVector):
@@ -178,6 +182,7 @@ class CapableOfVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'e'
         
       
 class HasSubeventVector(RelationVector):
@@ -194,6 +199,7 @@ class HasSubeventVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'f'
         
         
 class RelatedToVector(RelationVector):
@@ -210,6 +216,7 @@ class RelatedToVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'g'
         
         
 class HasPrerequisiteVector(RelationVector):
@@ -226,6 +233,7 @@ class HasPrerequisiteVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'h'
         
         
 class HasAVector(RelationVector):
@@ -242,6 +250,7 @@ class HasAVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'i'
         
         
 class MotivatedByGoalVector(RelationVector):
@@ -258,6 +267,7 @@ class MotivatedByGoalVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'j'
         
         
 class CausesVector(RelationVector):
@@ -274,6 +284,7 @@ class CausesVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'k'
         
         
 class DefinedAsVector(RelationVector):
@@ -290,6 +301,7 @@ class DefinedAsVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'l'
         
         
 class ReceivesActionVector(RelationVector):
@@ -306,6 +318,7 @@ class ReceivesActionVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'm'
         
         
 class PartOfVector(RelationVector):
@@ -322,6 +335,7 @@ class PartOfVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'n'
         
         
 class DesiresVector(RelationVector):
@@ -338,6 +352,7 @@ class DesiresVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'o'
         
         
 class CausesDesireVector(RelationVector):
@@ -354,6 +369,7 @@ class CausesDesireVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'p'
         
         
 class LocatedNearVector(RelationVector):
@@ -370,6 +386,7 @@ class LocatedNearVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'q'
         
         
 class ObstructedByVector(RelationVector):
@@ -386,6 +403,7 @@ class ObstructedByVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'r'
         
      
 class HasFirstSubeventVector(RelationVector):
@@ -402,6 +420,7 @@ class HasFirstSubeventVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 's'
         
         
 class HasLastSubeventVector(RelationVector):
@@ -418,6 +437,7 @@ class HasLastSubeventVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 't'
         
         
 class MadeOfVector(RelationVector):
@@ -434,6 +454,7 @@ class MadeOfVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'u'
         
         
 class SimilarSizeVector(RelationVector):
@@ -450,6 +471,7 @@ class SimilarSizeVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'v'
 
 
 class InheritsFromVector(RelationVector):
@@ -466,6 +488,7 @@ class InheritsFromVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'w'
 
 
 class InstanceOfVector(RelationVector):
@@ -482,3 +505,4 @@ class InstanceOfVector(RelationVector):
     }
     def __init__(self, attributes = attributes):
         RelationVector.__init__(self, attributes)
+        self.name = 'x'

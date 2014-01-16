@@ -32,10 +32,11 @@ class TestComposition(ut.TestCase):
         d = {}
         for u in self.vectors:
             for v in self.vectors:
-               key = '%s * %s' % (u.__class__.__name__, v.__class__.__name__)
+               #key = '%s * %s' % (u.__class__.__name__, v.__class__.__name__)
+               key = '%s * %s' % (u.name, v.name)
                new_vector = (u * v).get_vector_type()
                if new_vector is not None:
-                   d[key] = new_vector.__class__.__name__ 
+                   d[key] = new_vector.name
         
         pprint(d)
 
