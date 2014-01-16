@@ -124,7 +124,18 @@ class NearAlgebra(ConnectedAlgebra):
         ConnectedAlgebra.__init__(self)
         
 
-class IndexedTemporalAlgebra(TemporalAlgebra):
-    def __init__(self):
-        TemporalAlgebra.__init__(self)     
+class IndexedTemporalAlgebra(Algebra):
+    definition = {
+        '--': '-',
+        '-0': '0',
+        '-+': '0',
+        '0-': '0',
+        '00': '0',
+        '0+': '0',
+        '+-': '0',
+        '+0': '0',
+        '++': '+',
+    }
+    def __init__(self, definition = definition):
+        Algebra.__init__(self, definition)     
         

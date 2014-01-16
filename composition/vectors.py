@@ -413,9 +413,9 @@ class HasFirstSubeventVector(RelationVector):
         'separable'        : '+', 
         'temporal'         : '+', 
         'connected'        : '+', 
-        'intrinsic'        : '0', 
+        'intrinsic'        : '+', 
         'structural'       : '0', 
-        'near'             : '0', 
+        'near'             : '+', 
         'indexed_temporal' : '+'
     }
     def __init__(self, attributes = attributes):
@@ -430,9 +430,9 @@ class HasLastSubeventVector(RelationVector):
         'separable'        : '+', 
         'temporal'         : '+', 
         'connected'        : '+', 
-        'intrinsic'        : '0', 
+        'intrinsic'        : '+', 
         'structural'       : '0', 
-        'near'             : '0', 
+        'near'             : '+', 
         'indexed_temporal' : '-'
     }
     def __init__(self, attributes = attributes):
